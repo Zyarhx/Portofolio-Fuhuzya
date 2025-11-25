@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #e9353b;
+    --bg : #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: aliceblue;
+    min-height: 2000px;
+}
+
+/* Navbar */
+.narbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    background-color: rgba(95, 32, 15, 0.893);
+    border-bottom: 2px solid rgb(154, 78, 33)  ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.narbar .nav-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(252, 252, 252); ;
+} 
+.narbar .nav-logo span {
+    color: var(--primary-color);
+}
+
+.narbar .nav-menu a{
+    color: aliceblue;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 1rem;
+} 
+
+.narbar .nav-menu a:hover {
+    color: var(--primary-color);
+    transition: 0.3s ease;
+}
+
+.narbar .nav-menu a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary-color);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+.narbar .nav-menu a:hover::after {
+    transform: scaleX(1);
+}
+
+.narbar .navbar-extra a{
+    color: aliceblue;
+    margin: 0 0.5rem;
+}
+.narbar .navbar-extra a:hover {
+    color: var(--primary-color);
+    transition: 0.3s ease;
+}
+#logo {
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/fuhua.gif');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+#hambur-ger {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/1304054.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1)8%, rgba(255, 255, 255, 0) 50%);
+}
+.hero .content {
+    position: relative;
+    max-width: 60rem;
+    margin-left: 7%;
+    color: aliceblue;
+}
+
+.hero .content h1 {
+    font-size: 5rem;
+    color: #f6f1f1;
+    text-shadow: 1px 1px 5px rgba(1, 1, 3, 0.5);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    color: rgb(148, 66, 18);
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+    font-weight: 100;
+    text-shadow: 1px 1px 5px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+    margin-top: 1em;
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    background-color: rgb(244, 93, 5);
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 0.7rem;
+    box-shadow: 1px 1px 5px rgba(1, 1, 3, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+/* Tentang */
+.about {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10rem;
+    background-image: url('../img/fuka\(1\).jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.about-content {
+    padding: 0;
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #f6f1f1;
+    ;
+}
+
+.about-content h2 span {
+    color: rgb(148, 66, 18);
+}
+
+/* End Navbar */ 
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet  */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+    
+    #hambur-ger {
+        display: inline-block;
+    }
+    .narbar .nav-menu {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: seashell;   
+        width: 30rem; 
+        height: 100vh;
+        transition: 0.3s;
+        }
+    .narbar .nav-menu.active {
+        right: 0;
+    }
+    .narbar .nav-menu a {
+        display: block;
+        color: var(--bg);
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+}
+/* mobile */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
